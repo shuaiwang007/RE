@@ -17,6 +17,7 @@
 		607393821C97EC5700E50839 /* RETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 607393811C97EC5700E50839 /* RETests.m */; };
 		6073938D1C97EC5700E50839 /* REUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073938C1C97EC5700E50839 /* REUITests.m */; };
 		607393A01C97ECF700E50839 /* TextDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073939F1C97ECF700E50839 /* TextDetection.m */; };
+		CAE7192A7038BC722276E8D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B717361DFF9E828BE6A770D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		325353E5D641F3A11642B056 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5BF56177293E6A8CE1FF1D78 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		607393611C97EC5700E50839 /* RE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607393651C97EC5700E50839 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		607393671C97EC5700E50839 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		6073938E1C97EC5700E50839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6073939E1C97ECF700E50839 /* TextDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextDetection.h; sourceTree = "<group>"; };
 		6073939F1C97ECF700E50839 /* TextDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDetection.m; sourceTree = "<group>"; };
+		7B717361DFF9E828BE6A770D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE7192A7038BC722276E8D8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55ECDB7593C2EDD39509FE18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				325353E5D641F3A11642B056 /* Pods.debug.xcconfig */,
+				5BF56177293E6A8CE1FF1D78 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		607393581C97EC5700E50839 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +104,8 @@
 				607393801C97EC5700E50839 /* RETests */,
 				6073938B1C97EC5700E50839 /* REUITests */,
 				607393621C97EC5700E50839 /* Products */,
+				55ECDB7593C2EDD39509FE18 /* Pods */,
+				84F9512FD7E6F12FB14FC717 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +172,14 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		84F9512FD7E6F12FB14FC717 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B717361DFF9E828BE6A770D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607393911C97EC5700E50839 /* Build configuration list for PBXNativeTarget "RE" */;
 			buildPhases = (
+				EE25FAD886395BE9FA80E61C /* Check Pods Manifest.lock */,
 				6073935D1C97EC5700E50839 /* Sources */,
 				6073935E1C97EC5700E50839 /* Frameworks */,
 				6073935F1C97EC5700E50839 /* Resources */,
+				5907066438B3908CF3C5BD40 /* Embed Pods Frameworks */,
+				2664289A7314CE1993792242 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +307,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2664289A7314CE1993792242 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5907066438B3908CF3C5BD40 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE25FAD886395BE9FA80E61C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6073935D1C97EC5700E50839 /* Sources */ = {
@@ -429,23 +504,47 @@
 		};
 		607393921C97EC5700E50839 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 325353E5D641F3A11642B056 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Mr.wang.RE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)";
 			};
 			name = Debug;
 		};
 		607393931C97EC5700E50839 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BF56177293E6A8CE1FF1D78 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Mr.wang.RE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)";
 			};
 			name = Release;
 		};
@@ -516,6 +615,7 @@
 				607393931C97EC5700E50839 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		607393941C97EC5700E50839 /* Build configuration list for PBXNativeTarget "RETests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +624,7 @@
 				607393961C97EC5700E50839 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		607393971C97EC5700E50839 /* Build configuration list for PBXNativeTarget "REUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +633,7 @@
 				607393991C97EC5700E50839 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
