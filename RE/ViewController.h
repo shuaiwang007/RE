@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
-      UITextField *_emailTextField;
-}
-
+@interface ViewController : UIViewController
 
 @end
 
