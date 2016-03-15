@@ -12,5 +12,5 @@ if (![TextDetection validateEmail:_emailTextField.text] && _emailTextField.text.
 >
 >
 
-Demo中为了简便起见，我将正则判断的事件放在了touchesEnded里，即触摸空白处收起键盘时。
+Demo中为了简便起见，我将正则判断的事件放在了touchesEnded里，即触摸空白处收起键盘时。这时，会在终端打印出验证结果
 使用者可自定义，可根据需求修改。
